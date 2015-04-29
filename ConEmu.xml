@@ -1,7 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
-	<key name="ConEmu">
-		<key name=".Vanilla" modified="2014-11-10 10:54:25" build="140707">
+<key name="ConEmu">
+	<key name=".Vanilla" modified="2015-04-28 18:00:47" build="140707">
+			<value name="UseCurrentSizePos" type="hex" data="01"/>
+			<value name="WindowMode" type="dword" data="00000520"/>
+			<value name="ConWnd Width" type="dword" data="00000080"/>
+			<value name="ConWnd Height" type="dword" data="00000022"/>
+			<value name="Cascaded" type="hex" data="01"/>
+			<value name="IntegralSize" type="hex" data="00"/>
+			<value name="ConWnd X" type="dword" data="00000027"/>
+			<value name="ConWnd Y" type="dword" data="fffffff8"/>
+			<value name="16bit Height" type="dword" data="00000000"/>
+			<value name="AutoSaveSizePos" type="hex" data="01"/>
+			<value name="SingleInstance" type="hex" data="00"/>
+			<value name="KeyboardHooks" type="hex" data="02"/>
+			<value name="UseInjects" type="hex" data="01"/>
+			<value name="Update.CheckOnStartup" type="hex" data="01"/>
+			<value name="Update.CheckHourly" type="hex" data="00"/>
+			<value name="Update.ConfirmDownload" type="hex" data="01"/>
+			<value name="Update.UseBuilds" type="hex" data="01"/>
 			<value name="ColorTable00" type="dword" data="00000000"/>
 			<value name="ColorTable01" type="dword" data="003b1b0b"/>
 			<value name="ColorTable02" type="dword" data="0000ff00"/>
@@ -61,13 +77,19 @@
 			<value name="FadeInactiveHigh" type="hex" data="c8"/>
 			<value name="ConVisible" type="hex" data="00"/>
 			<value name="ConInMode" type="dword" data="ffffffff"/>
-			<value name="UseInjects" type="hex" data="01"/>
 			<value name="SetDefaultTerminal" type="hex" data="00"/>
 			<value name="SetDefaultTerminalStartup" type="hex" data="00"/>
+			<value name="SetDefaultTerminalStartupTSA" type="hex" data="01"/>
+			<value name="DefaultTerminalAgressive" type="hex" data="01"/>
 			<value name="DefaultTerminalNoInjects" type="hex" data="00"/>
+			<value name="DefaultTerminalNewWindow" type="hex" data="00"/>
 			<value name="DefaultTerminalConfirm" type="hex" data="01"/>
 			<value name="DefaultTerminalApps" type="string" data="explorer.exe"/>
 			<value name="ProcessAnsi" type="hex" data="01"/>
+			<value name="AnsiLog" type="hex" data="00"/>
+			<value name="AnsiLogPath" type="string" data="%ConEmuDir%\Logs\"/>
+			<value name="ProcessNewConArg" type="hex" data="01"/>
+			<value name="ConsoleExceptionHandler" type="hex" data="00"/>
 			<value name="UseClink" type="hex" data="01"/>
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data=""/>
@@ -77,8 +99,8 @@
 			<value name="StartFarEditors" type="hex" data="00"/>
 			<value name="StoreTaskbarkTasks" type="hex" data="00"/>
 			<value name="StoreTaskbarCommands" type="hex" data="00"/>
+			<value name="SaveCmdHistory" type="hex" data="00"/>
 			<value name="CmdLineHistory" type="multi"><line data=";C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\"/></value>
-			<value name="SingleInstance" type="hex" data="00"/>
 			<value name="ShowHelpTooltips" type="hex" data="01"/>
 			<value name="Multi" type="hex" data="01"/>
 			<value name="Multi.ShowButtons" type="hex" data="01"/>
@@ -86,6 +108,8 @@
 			<value name="Multi.CloseConfirm" type="hex" data="00"/>
 			<value name="Multi.CloseEditViewConfirm" type="hex" data="00"/>
 			<value name="Multi.NewConfirm" type="hex" data="01"/>
+			<value name="Multi.DupConfirm" type="hex" data="01"/>
+			<value name="Multi.DetachConfirm" type="hex" data="01"/>
 			<value name="Multi.UseArrows" type="hex" data="00"/>
 			<value name="Multi.UseNumbers" type="hex" data="01"/>
 			<value name="Multi.UseWinTab" type="hex" data="00"/>
@@ -97,7 +121,6 @@
 			<value name="Multi.Iterate" type="hex" data="01"/>
 			<value name="Multi.SplitWidth" type="hex" data="04"/>
 			<value name="Multi.SplitHeight" type="hex" data="04"/>
-			<value name="KeyboardHooks" type="hex" data="02"/>
 			<value name="FontName" type="string" data="Consolas"/>
 			<value name="FontName2" type="string" data="Lucida Console"/>
 			<value name="FontAutoSize" type="hex" data="00"/>
@@ -122,16 +145,6 @@
 			<value name="UserScreenTransparent" type="hex" data="00"/>
 			<value name="ColorKeyTransparent" type="hex" data="00"/>
 			<value name="ColorKeyValue" type="dword" data="00010101"/>
-			<value name="UseCurrentSizePos" type="hex" data="01"/>
-			<value name="WindowMode" type="dword" data="00000521"/>
-			<value name="ConWnd Width" type="dword" data="0000005e"/>
-			<value name="ConWnd Height" type="dword" data="0000001a"/>
-			<value name="Cascaded" type="hex" data="01"/>
-			<value name="ConWnd X" type="dword" data="fffffff5"/>
-			<value name="ConWnd Y" type="dword" data="fffffff5"/>
-			<value name="16bit Height" type="dword" data="00000000"/>
-			<value name="AutoSaveSizePos" type="hex" data="01"/>
-			<value name="IntegralSize" type="hex" data="00"/>
 			<value name="QuakeStyle" type="hex" data="00"/>
 			<value name="QuakeAnimation" type="dword" data="0000012c"/>
 			<value name="HideCaption" type="hex" data="00"/>
@@ -153,15 +166,18 @@
 			<value name="ComSpec.UpdateEnv" type="hex" data="00"/>
 			<value name="ComSpec.EnvAddPath" type="hex" data="01"/>
 			<value name="ComSpec.EnvAddExePath" type="hex" data="01"/>
-			<value name="ComSpec.UncPaths" type="hex" data="00"/>
+			<value name="ComSpec.UncPaths" type="hex" data="01"/>
 			<value name="ComSpec.Path" type="string" data=""/>
-			<value name="ConsoleTextSelection" type="hex" data="01"/>
+			<value name="CTS.Intelligent" type="hex" data="01"/>
+			<value name="CTS.IntelligentExceptions" type="string" data="far|vim.exe"/>
 			<value name="CTS.AutoCopy" type="hex" data="01"/>
+			<value name="CTS.IBeam" type="hex" data="01"/>
 			<value name="CTS.EndOnTyping" type="hex" data="00"/>
 			<value name="CTS.EndOnKeyPress" type="hex" data="00"/>
 			<value name="CTS.Freeze" type="hex" data="00"/>
 			<value name="CTS.SelectBlock" type="hex" data="01"/>
 			<value name="CTS.SelectText" type="hex" data="01"/>
+			<value name="CTS.HtmlFormat" type="hex" data="00"/>
 			<value name="CTS.ActMode" type="hex" data="02"/>
 			<value name="CTS.RBtnAction" type="hex" data="00"/>
 			<value name="CTS.MBtnAction" type="hex" data="00"/>
@@ -170,6 +186,8 @@
 			<value name="ClipboardConfirmLonger" type="dword" data="00000000"/>
 			<value name="FarGotoEditorOpt" type="hex" data="01"/>
 			<value name="FarGotoEditorPath" type="string" data="far.exe /e%1:%2 &quot;%3&quot;"/>
+			<value name="HighlightMouseRow" type="hex" data="00"/>
+			<value name="HighlightMouseCol" type="hex" data="00"/>
 			<value name="FixFarBorders" type="hex" data="01"/>
 			<value name="FixFarBordersRanges" type="string" data="2013-25C4;"/>
 			<value name="ExtendUCharMap" type="hex" data="01"/>
@@ -248,15 +266,21 @@
 			<value name="StatusBar.Hide.Sync" type="hex" data="00"/>
 			<value name="StatusBar.Hide.Proc" type="hex" data="00"/>
 			<value name="StatusBar.Hide.Title" type="hex" data="01"/>
+			<value name="StatusBar.Hide.Time" type="hex" data="01"/>
 			<value name="StatusBar.Hide.Resize" type="hex" data="00"/>
 			<value name="Tabs" type="hex" data="02"/>
 			<value name="TabsLocation" type="hex" data="01"/>
+			<value name="TabIcons" type="hex" data="01"/>
+			<value name="OneTabPerGroup" type="hex" data="01"/>
+			<value name="ActivateSplitMouseOver" type="hex" data="01"/>
 			<value name="TabSelf" type="hex" data="01"/>
 			<value name="TabLazy" type="hex" data="00"/>
 			<value name="TabRecent" type="hex" data="01"/>
 			<value name="TabDblClick" type="dword" data="00000001"/>
+			<value name="TabBtnDblClick" type="dword" data="00000000"/>
 			<value name="TabsOnTaskBar" type="hex" data="02"/>
 			<value name="TaskBarOverlay" type="hex" data="01"/>
+			<value name="TaskbarProgress" type="hex" data="01"/>
 			<value name="TabCloseMacro" type="string" data=""/>
 			<value name="TabFontFace" type="string" data="Segoe UI"/>
 			<value name="TabFontCharSet" type="dword" data="00000000"/>
@@ -289,6 +313,7 @@
 			<value name="SnapToDesktopEdges" type="hex" data="00"/>
 			<value name="AlwaysOnTop" type="hex" data="00"/>
 			<value name="SleepInBackground" type="hex" data="01"/>
+			<value name="RetardInactivePanes" type="hex" data="00"/>
 			<value name="MinimizeOnLoseFocus" type="hex" data="00"/>
 			<value name="DisableFarFlashing" type="hex" data="00"/>
 			<value name="DisableAllFlashing" type="hex" data="00"/>
@@ -326,10 +351,6 @@
 			<value name="PanView.UsePicView2" type="hex" data="01"/>
 			<value name="PanView.RestoreOnStartup" type="hex" data="00"/>
 			<value name="Update.VerLocation" type="string" data=""/>
-			<value name="Update.CheckOnStartup" type="hex" data="01"/>
-			<value name="Update.CheckHourly" type="hex" data="00"/>
-			<value name="Update.ConfirmDownload" type="hex" data="01"/>
-			<value name="Update.UseBuilds" type="hex" data="01"/>
 			<value name="Update.UseProxy" type="hex" data="00"/>
 			<value name="Update.Proxy" type="string" data=""/>
 			<value name="Update.ProxyUser" type="string" data=""/>
@@ -350,12 +371,23 @@
 			<value name="SetFocusGui" type="dword" data="00000000"/>
 			<value name="SetFocusChild" type="dword" data="00000000"/>
 			<value name="ChildSystemMenu" type="dword" data="ffffffff"/>
+			<value name="Multi.NewSplitV" type="dword" data="00005d53"/>
+			<value name="Multi.NewSplitH" type="dword" data="00005d56"/>
+			<value name="Multi.SplitSizeVU" type="dword" data="00105d26"/>
+			<value name="Multi.SplitSizeVD" type="dword" data="00105d28"/>
+			<value name="Multi.SplitSizeHL" type="dword" data="00105d25"/>
+			<value name="Multi.SplitSizeHR" type="dword" data="00105d27"/>
+			<value name="Key.TabPane1" type="dword" data="80808000"/>
+			<value name="Key.TabPane2" type="dword" data="80808000"/>
+			<value name="Multi.SplitFocusU" type="dword" data="00005d26"/>
+			<value name="Multi.SplitFocusD" type="dword" data="00005d28"/>
+			<value name="Multi.SplitFocusL" type="dword" data="00005d25"/>
+			<value name="Multi.SplitFocusR" type="dword" data="00005d27"/>
 			<value name="Multi.NewConsole" type="dword" data="80808000"/>
 			<value name="Multi.NewConsoleShift" type="dword" data="00001154"/>
 			<value name="Multi.NewConsolePopup" type="dword" data="80808000"/>
+			<value name="Multi.NewConsolePopup2" type="dword" data="00000000"/>
 			<value name="Multi.NewWindow" type="dword" data="00000000"/>
-			<value name="Multi.NewSplitV" type="dword" data="00005d53"/>
-			<value name="Multi.NewSplitH" type="dword" data="00005d56"/>
 			<value name="Multi.NewAttach" type="dword" data="00005b00"/>
 			<value name="Multi.Next" type="dword" data="00101127"/>
 			<value name="Multi.NextShift" type="dword" data="00101125"/>
@@ -365,6 +397,9 @@
 			<value name="Multi.Close" type="dword" data="00005d51"/>
 			<value name="CloseTabKey" type="dword" data="00105d51"/>
 			<value name="CloseGroupKey" type="dword" data="00000000"/>
+			<value name="CloseGroupPrcKey" type="dword" data="00000000"/>
+			<value name="CloseAllConKey" type="dword" data="00000000"/>
+			<value name="CloseExceptConKey" type="dword" data="00000000"/>
 			<value name="TerminateProcessKey" type="dword" data="80808000"/>
 			<value name="DuplicateRootKey" type="dword" data="00000000"/>
 			<value name="CloseConEmuKey" type="dword" data="00001273"/>
@@ -374,7 +409,11 @@
 			<value name="Multi.CmdKey" type="dword" data="80808000"/>
 			<value name="CTS.VkBlockStart" type="dword" data="00000000"/>
 			<value name="CTS.VkTextStart" type="dword" data="00000000"/>
+			<value name="CTS.VkCopyFmt0" type="dword" data="00001143"/>
+			<value name="CTS.VkCopyFmt1" type="dword" data="00101143"/>
+			<value name="CTS.VkCopyFmt2" type="dword" data="00000000"/>
 			<value name="CTS.VkCopyAll" type="dword" data="00000000"/>
+			<value name="HighlightMouseSwitch" type="dword" data="00005d4c"/>
 			<value name="Multi.ShowTabsList" type="dword" data="00000000"/>
 			<value name="Multi.ShowTabsList2" type="dword" data="80808000"/>
 			<value name="ClipboardVkAllLines" type="dword" data="00001156"/>
@@ -387,11 +426,13 @@
 			<value name="ShowTabBarKey" type="dword" data="80808000"/>
 			<value name="ShowCaptionKey" type="dword" data="80808000"/>
 			<value name="AlwaysOnTopKey" type="dword" data="00000000"/>
+			<value name="TransparencyInc" type="dword" data="00000000"/>
+			<value name="TransparencyDec" type="dword" data="00000000"/>
 			<value name="Key.TabMenu" type="dword" data="80808000"/>
 			<value name="Key.TabMenu2" type="dword" data="80808000"/>
-			<value name="Key.TabPane1" type="dword" data="80808000"/>
-			<value name="Key.TabPane2" type="dword" data="80808000"/>
 			<value name="Key.Maximize" type="dword" data="80808000"/>
+			<value name="Key.MaximizeWidth" type="dword" data="00000000"/>
+			<value name="Key.MaximizeHeight" type="dword" data="00000000"/>
 			<value name="Key.FullScreen" type="dword" data="0000120d"/>
 			<value name="Key.SysMenu" type="dword" data="80808000"/>
 			<value name="Key.SysMenu2" type="dword" data="00001102"/>
@@ -483,25 +524,25 @@
 			<value name="DndLKey" type="hex" data="00"/>
 			<value name="DndRKey" type="hex" data="a2"/>
 			<value name="WndDragKey" type="dword" data="00121101"/>
-				<key name="Tasks" modified="2014-11-08 18:07:05" build="140707">
+				<key name="Tasks" modified="2015-04-24 17:44:42" build="140707">
 				<value name="Count" type="dword" data="00000004"/>
-						<key name="Task1" modified="2014-11-08 18:07:05" build="140707">
+						<key name="Task1" modified="2015-04-24 17:44:42" build="140707">
 					<value name="Name" type="string" data="{PowerShell}"/>
+					<value name="Hotkey" type="dword" data="00001250"/>
 					<value name="GuiArgs" type="string" data=""/>
 					<value name="Cmd1" type="string" data="powershell"/>
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
-					<value name="Hotkey" type="dword" data="00001250"/>
 				</key>
-						<key name="Task2" modified="2014-11-08 18:07:05" build="140707">
+						<key name="Task2" modified="2015-04-24 17:44:42" build="140707">
 					<value name="Name" type="string" data="{cmd}"/>
+					<value name="Hotkey" type="dword" data="00001243"/>
 					<value name="GuiArgs" type="string" data=" /icon &quot;%CMDER_ROOT%\cmder.exe&quot;"/>
 					<value name="Cmd1" type="string" data="cmd /k &quot;%ConEmuDir%\..\init.bat&quot;  -new_console"/>
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
-					<value name="Hotkey" type="dword" data="00001243"/>
 				</key>
-						<key name="Task3" modified="2014-11-08 18:07:05" build="140707">
+						<key name="Task3" modified="2015-04-24 17:44:42" build="140707">
 					<value name="Name" type="string" data="{Powershell *}"/>
 					<value name="Hotkey" type="dword" data="00a4a250"/>
 					<value name="GuiArgs" type="string" data=""/>
@@ -509,7 +550,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-						<key name="Task4" modified="2014-11-08 18:07:05" build="140707">
+						<key name="Task4" modified="2015-04-24 17:44:42" build="140707">
 					<value name="Name" type="string" data="{cmd *}"/>
 					<value name="Hotkey" type="dword" data="00a4a243"/>
 					<value name="GuiArgs" type="string" data=""/>
@@ -518,11 +559,11 @@
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
 			</key>
-				<key name="Apps" modified="2014-11-08 18:07:05" build="140707">
+				<key name="Apps" modified="2015-04-24 17:44:42" build="140707">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
-			<key name="Colors" modified="2014-11-08 18:07:05" build="140707">
-			<key name="Palette1" modified="2014-11-08 18:07:05" build="140707">
+				<key name="Colors" modified="2015-04-24 17:44:42" build="140707">
+			<key name="Palette1" modified="2015-04-24 17:44:42" build="140707">
 					<value name="Name" type="string" data="ashic"/>
 					<value name="ExtendColors" type="hex" data="00"/>
 					<value name="ExtendColorIdx" type="hex" data="0e"/>
@@ -563,8 +604,7 @@
 					<value name="ColorTable30" type="dword" data="0000ffff"/>
 					<value name="ColorTable31" type="dword" data="00ffffff"/>
 				</key>
-				<value name="Count" type="dword" data="00000002"/>
-						<key name="Palette2" modified="2014-11-08 18:07:05" build="140707">
+						<key name="Palette2" modified="2015-04-24 17:44:42" build="140707">
 					<value name="Name" type="string" data="Monokai"/>
 					<value name="ExtendColors" type="hex" data="00"/>
 					<value name="ExtendColorIdx" type="hex" data="0e"/>
@@ -605,50 +645,8 @@
 					<value name="ColorTable30" type="dword" data="0000ffff"/>
 					<value name="ColorTable31" type="dword" data="00ffffff"/>
 				</key>
+				<value name="Count" type="dword" data="00000002"/>
 			</key>
-			<value name="OneTabPerGroup" type="hex" data="01"/>
-			<value name="ActivateSplitMouseOver" type="hex" data="01"/>
-			<value name="TabBtnDblClick" type="dword" data="00000000"/>
-			<value name="ConsoleExceptionHandler" type="hex" data="00"/>
-			<value name="SaveCmdHistory" type="hex" data="00"/>
-			<value name="CTS.IBeam" type="hex" data="01"/>
-			<value name="Multi.SplitSizeVU" type="dword" data="00105d26"/>
-			<value name="Multi.SplitSizeVD" type="dword" data="00105d28"/>
-			<value name="Multi.SplitSizeHL" type="dword" data="00105d25"/>
-			<value name="Multi.SplitSizeHR" type="dword" data="00105d27"/>
-			<value name="Multi.SplitFocusU" type="dword" data="00005d26"/>
-			<value name="Multi.SplitFocusD" type="dword" data="00005d28"/>
-			<value name="Multi.SplitFocusL" type="dword" data="00005d25"/>
-			<value name="Multi.SplitFocusR" type="dword" data="00005d27"/>
-			<value name="CloseGroupPrcKey" type="dword" data="00000000"/>
-			<value name="SetDefaultTerminalStartupTSA" type="hex" data="01"/>
-			<value name="CTS.HtmlFormat" type="hex" data="00"/>
-			<value name="TabIcons" type="hex" data="01"/>
-			<value name="Multi.NewConsolePopup2" type="dword" data="00000000"/>
-			<value name="CloseAllConKey" type="dword" data="00000000"/>
-			<value name="CloseExceptConKey" type="dword" data="00000000"/>
-			<value name="CTS.VkCopyFmt0" type="dword" data="00001143"/>
-			<value name="CTS.VkCopyFmt1" type="dword" data="00101143"/>
-			<value name="CTS.VkCopyFmt2" type="dword" data="00000000"/>
-			<value name="ProcessNewConArg" type="hex" data="01"/>
-			<value name="HighlightMouseRow" type="hex" data="00"/>
-			<value name="HighlightMouseCol" type="hex" data="00"/>
-			<value name="HighlightMouseSwitch" type="dword" data="00005d4c"/>
-			<value name="TransparencyInc" type="dword" data="00000000"/>
-			<value name="TransparencyDec" type="dword" data="00000000"/>
-			<value name="Key.MaximizeWidth" type="dword" data="00000000"/>
-			<value name="Key.MaximizeHeight" type="dword" data="00000000"/>
-			<value name="DefaultTerminalAgressive" type="hex" data="01"/>
-			<value name="DefaultTerminalNewWindow" type="hex" data="00"/>
-			<value name="AnsiLog" type="hex" data="00"/>
-			<value name="AnsiLogPath" type="string" data="%ConEmuDir%\Logs\"/>
-			<value name="Multi.DupConfirm" type="hex" data="01"/>
-			<value name="Multi.DetachConfirm" type="hex" data="01"/>
-			<value name="CTS.Intelligent" type="hex" data="01"/>
-			<value name="CTS.IntelligentExceptions" type="string" data="far|vim.exe"/>
-			<value name="StatusBar.Hide.Time" type="hex" data="01"/>
-			<value name="TaskbarProgress" type="hex" data="01"/>
-			<value name="RetardInactivePanes" type="hex" data="00"/>
 		</key>
 	</key>
 </key>
